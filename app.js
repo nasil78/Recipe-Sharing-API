@@ -223,6 +223,28 @@ fs.readFile(recipesFilePath, 'utf8', (err, data) => {
     }
 });
 
+// Edit Existing recipe
+app.put('/api/recipes/:recipeId', (req, res) => {
+    const recipeId = req.params.recipeId;
+    const updatedRecipe = req.body;
+
+    let recipes = JSON.parse(fs.readFileSync('recipes.json', 'utf8'));
+
+    const recipeIndex = recipes.findIndex(recipe => recipe.recipeId === parseInt(recipeId));
+
+    if (recipeIndex === -1) {
+        return res.status(404).send('Recipe not found.');
+    }
+
+    recipes[recipeIndex] = {
+        ...recipes[recipeIndex],
+        ...updatedRecipe
+    };
+
+    fs.writeFileSync('recipes.json', JSON.stringify(recipes, null, 2));
+
+    res.send('Recipe updated successfully.');
+});
 
 
 app.post('/api/recipes', validateUser, (req, res) => {
