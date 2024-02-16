@@ -3,12 +3,11 @@
 -	Cindy Legaspino
 -	John Kenneth Fetizanan
 -	Elvin Tolin
--	Ashbie Sinsoa
+-	Ashbei Andrea Sinsoa
 ## Overview
 A web-based tool called the Recipe Sharing API was created to make it easier for users to create, share, edit, and remove recipes. It provides an extensive collection of endpoints for recipe management in relation to different meal categories, such as breakfast, lunch, dinner, and dessert. Apart from facilitating fundamental features such as authentication and recipe retrieval, users can effortlessly add, edit, and remove recipes to customize their culinary journey.
 ## Purpose
 This project aims to develop an approachable platform that people can use to share their favorite recipes with others, encouraging gastronomic exploration and a sense of community. Users can find, share, and alter recipes with ease using a centralized API that offers powerful recipe management features. This improves cooking experiences and fosters culinary innovation. 
-
 
 
 ## Features
